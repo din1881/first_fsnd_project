@@ -41,7 +41,6 @@ def err_percent(query):
 
 if __name__ == '__main__':
 	# executing the results
-
     most_readed_articles(first_query)
     most_famous_authors(second_query)
     err_percent(third_query)
