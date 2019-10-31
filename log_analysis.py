@@ -6,21 +6,12 @@ import psycopg2
 
 dbname = "news"
 
-first_query = """SELECT *
-            FROM artviews
-            LIMIT 3;"""
+first_query = """SELECT * FROM artviews LIMIT 3;"""
 
-second_query = """SELECT name, sum(artviews.views) AS views
-            FROM artauthors, artviews
-            WHERE artauthors.title = artviews.title
-            GROUP BY name
-            ORDER BY views desc;"""
+second_query = """SELECT name, sum(artviews.views) AS views FROM artauthors, artviews WHERE artauthors.title = artviews.title GROUP BY name ORDER BY views desc;"""
 
 
-third_query = """SELECT err_logs.date, round(100.0*error_c/log_c,2) as percent
-            FROM logs, err_logs
-            WHERE logs.date = err_logs.date
-            AND error_c > log_c/100;"""
+third_query = """SELECT err_logs.date, round(100.0*error_c/log_c,2) as percent FROM logs, err_logs WHERE logs.date = err_logs.date AND error_c > log_c/100;"""
 
 
 def connect(query):
