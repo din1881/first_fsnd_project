@@ -1,6 +1,4 @@
-
 # My Logs Analysis Project
-
 import psycopg2
 
 dbname = "news"
