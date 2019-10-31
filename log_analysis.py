@@ -25,13 +25,13 @@ def connect(query):
 
 def most_readed_articles(query):
     res = connect(query)
-    print('The most popular articles of all time:\n')
+    print('Most popular articles of all time:\n')
     for k in res:
         print('\t' + str(k[0]) + ' - ' + str(k[1]) + ' view')
 
 def most_famous_authors(query):
     res = connect(query)
-    print('The most popular authors of all time:\n')
+    print('Most popular authors of all time:\n')
     for k in res:
         print('\t' + str(k[0]) + ' - ' + str(k[1]) + ' view')
 
