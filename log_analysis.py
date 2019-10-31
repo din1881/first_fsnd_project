@@ -1,3 +1,4 @@
+# !/usr/bin/env python
 # My Logs Analysis Project
 import psycopg2
 
