@@ -26,18 +26,21 @@ def most_readed_articles(query):
     print('Most popular articles of all time:\n')
     for k in res:
         print('\t' + str(k[0]) + ' - ' + str(k[1]) + ' view')
-
+    print('\n')
+	
 def most_famous_authors(query):
     res = connect(query)
     print('Most popular authors of all time:\n')
     for k in res:
         print('\t' + str(k[0]) + ' - ' + str(k[1]) + ' view')
-
+    print('\n')
+	
 def err_percent(query):
     res = connect(query)
     print('The days where more than 1% of requests lead to error:\n')
     for k in res:
         print('\t' + str(k[0]) + ' - ' + str(k[1]) + ' %' + ' errors')
+    print('\n')
 
 if __name__ == '__main__':
 	# executing the results
